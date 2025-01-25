@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DBMS Dashboard</h1>
+
+        <!-- Create Table Section -->
+        <section>
+            <h2>Create a New Table</h2>
+            <input type="text" id="tableName" placeholder="Table Name">
+            <input type="number" id="numColumns" placeholder="Number of Columns" min="1" onchange="updateColumnInputs()">
+            <div id="columnInputs"></div>
+            <button onclick="createTable()">Create Table</button>
+        </section>
+
+        <!-- Table Display Section -->
+        <section id="tablesSection">
+            <h2>Tables</h2>
+            <div id="tablesContainer"></div>
+        </section>
+
+        <!-- Join Operations Section -->
+        <section>
+            <h2>Join Operations</h2>
+            <select id="joinTable1"></select>
+            <select id="joinTable2"></select>
+            <button onclick="performInnerJoin()">Inner Join</button>
+            <button onclick="performLeftJoin()">Left Join</button>
+            <h3>Join Result:</h3>
+            <table id="joinResultTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Salary</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody id="joinResultBody"></tbody>
+            </table>
+        </section>
+
+        <!-- Aggregate Functions Section -->
+        <section>
+            <h2>Aggregate Functions</h2>
+            <select id="aggregateTable"></select>
+            <select id="aggregateColumn"></select>
+            <button onclick="calculateAggregate('sum')">Sum</button>
+            <button onclick="calculateAggregate('avg')">Average</button>
+            <button onclick="calculateAggregate('min')">Minimum</button>
+            <button onclick="calculateAggregate('max')">Maximum</button>
+            <div id="aggregateResult"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

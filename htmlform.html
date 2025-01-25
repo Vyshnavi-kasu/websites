@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <title>
+        formExample
+    </title>
+    <body>
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        <p>Fill the details</p>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+
+        </form>
+        <div class="login-container">
+        <p>choose the favourite one:</p>
+        <form>
+           <input type="radio" id="mango" name="fruit" value="Mango">
+            <label for="Mango">Mango</label><br>
+            <input type="radio" id="pineapple" name="fruit" value="pineapple">
+            <label for="pineapple">pineapple</label><br>
+            <p>U travelled in: </p>
+            <input type="checkbox" id="car1" name="car1" value="car">
+            <label for="car1">car</label><br>
+            <input type="checkbox" id="bus1" name="bus1" value="bus">
+            <label for="bus1">bus</label><br>
+            <input type="submit" value="submit">
+        </div>
+        </form>
+    </body>
+</html>
